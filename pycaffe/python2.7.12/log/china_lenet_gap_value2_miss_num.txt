@@ -1,0 +1,19 @@
+]0;IPython: pycaffe/python2.7.12 
+../../china_lenet_gap_deploy.prototxt
+../../weights/china_lenet_gap/china_lenet_gap_value2_iter_15000.caffemodel
+ 
+/home/higaki/china_data/image_2/test/alp/D/0511_SN1_2.png 0
+/home/higaki/china_data/image_2/test/alp/D/1031_SN1_0.png 0
+/home/higaki/china_data/image_2/test/alp/G/0955_SN1_0.png 0
+/home/higaki/china_data/image_2/test/alp/G/1055_SN1_1.png 0
+/home/higaki/china_data/image_2/test/alp/G/1059_SN1_0.png 12
+/home/higaki/china_data/image_2/test/alp/H/0751_SN1_1.png 15
+/home/higaki/china_data/image_2/test/alp/L/1043_SN1_1.png 1
+/home/higaki/china_data/image_2/test/num/0/0547_SN1_4.png 12
+/home/higaki/china_data/image_2/test/num/5/0459_SN1_3.png 0
+/home/higaki/china_data/image_2/test/num/5/1043_SN1_8.png 6
+/home/higaki/china_data/image_2/test/num/5/1107_SN1_2.png 1
+/home/higaki/china_data/image_2/test/num/7/0727_SN1_3.png 33
+/home/higaki/china_data/image_2/test/num/9/0767_SN1_3.png 0
+/home/higaki/china_data/image_2/test/num/9/1027_SN1_3.png 0
+/home/higaki/china_data/image_2/test/num/9/1043_SN1_9.png 0

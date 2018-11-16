@@ -1,0 +1,17 @@
+]0;IPython: pycaffe/python2.7.12 
+../../china_lenet_deploy.prototxt
+../../weights/china_lenet/china_lenet_value2_iter_15000.caffemodel
+ 
+/home/higaki/china_data/image_2/test/alp/C/0583_SN1_0.png 0
+/home/higaki/china_data/image_2/test/alp/C/0615_SN1_2.png 16
+/home/higaki/china_data/image_2/test/num/0/0535_SN1_4.png 6
+/home/higaki/china_data/image_2/test/num/0/0547_SN1_4.png 6
+/home/higaki/china_data/image_2/test/num/0/0775_SN1_2.png 26
+/home/higaki/china_data/image_2/test/num/2/0511_SN1_3.png 35
+/home/higaki/china_data/image_2/test/num/3/1151_SN1_2.png 8
+/home/higaki/china_data/image_2/test/num/4/0999_SN1_2.png 8
+/home/higaki/china_data/image_2/test/num/5/0459_SN1_3.png 28
+/home/higaki/china_data/image_2/test/num/5/1043_SN1_8.png 6
+/home/higaki/china_data/image_2/test/num/5/1107_SN1_2.png 11
+/home/higaki/china_data/image_2/test/num/7/1039_SN1_2.png 35
+/home/higaki/china_data/image_2/test/num/7/1115_SN1_3.png 29

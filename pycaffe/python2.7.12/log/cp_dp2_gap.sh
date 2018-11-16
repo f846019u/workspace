@@ -1,0 +1,33 @@
+#!/bin/sh
+
+cp /home/higaki/china_data/image_0/test/alp/C/0761_SN1_0.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/alp/C/0773_SN1_0.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/alp/J/0553_SN1_0.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/alp/J/0737_SN1_1.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/alp/J/0981_SN1_0.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/alp/L/0453_SN1_0.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/alp/L/1049_SN1_1.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/alp/Q/0501_SN1_1.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/alp/Q/0737_SN1_0.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/alp/Q/1133_SN1_0.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/alp/U/1109_SN1_0.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/0/0509_SN1_3.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/0/0729_SN1_3.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/0/1105_SN1_3.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/2/0525_SN1_3.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/2/0773_SN1_3.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/3/0525_SN1_1.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/4/0501_SN1_3.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/4/0501_SN1_7.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/4/0949_SN1_3.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/4/1005_SN1_3.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/4/1021_SN1_3.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/5/0445_SN1_1.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/5/0977_SN1_2.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/5/1113_SN1_2.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/5/1165_SN1_7.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/7/0537_SN1_2.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/7/0549_SN1_2.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/8/0509_SN1_2.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/8/0729_SN1_2.png ./china_lenet_dp2_gap/
+cp /home/higaki/china_data/image_0/test/num/9/0537_SN1_3.png ./china_lenet_dp2_gap/

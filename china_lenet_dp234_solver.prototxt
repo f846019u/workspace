@@ -1,0 +1,15 @@
+net: "china_lenet_dp234_train_test.prototxt"
+test_iter: 100
+test_interval: 500
+base_lr: 0.0001
+momentum: 0.9
+weight_decay: 0.0005
+lr_policy: "inv"
+gamma: 0.0001
+power: 0.75
+display: 100
+max_iter: 20000
+snapshot: 5000
+snapshot_prefix: "weights/china_lenet_dp234/china_lenet_dp234_value0"
+type: "Adam"
+solver_mode: CPU

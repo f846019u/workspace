@@ -1,0 +1,22 @@
+]0;IPython: pycaffe/python2.7.12error: pre-trained caffe model...
+ 
+../../china_lenet_dp234_deploy.prototxt
+../../weights/china_lenet_dp234/china_lenet_dp234_value2_iter_15000.caffemodel
+ 
+[0;31m[0m
+[0;31mRuntimeError[0mTraceback (most recent call last)
+[0;32m/home/higaki/workspace_caffe/2018_10_24/pycaffe/python2.7.12/value2/check_china_lenet_dp234.py[0m in [0;36m<module>[0;34m()[0m
+[1;32m    102[0m [0mcaffe[0m[0;34m.[0m[0mset_mode_cpu[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0m
+[1;32m    103[0m [0;34m[0m[0m
+[0;32m--> 104[0;31m [0mnet[0m [0;34m=[0m [0mcaffe[0m[0;34m.[0m[0mClassifier[0m[0;34m([0m[0mMODEL_FILE[0m[0;34m,[0m [0mPRETRAINED[0m[0;34m,[0m [0mimage_dims[0m[0;34m=[0m[0;34m([0m[0;36m20[0m[0;34m,[0m [0;36m14[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    105[0m [0;34m[0m[0m
+[1;32m    106[0m [0;32mfor[0m [0;34m([0m[0mY[0m[0;34m,[0m [0mname[0m[0;34m)[0m [0;32min[0m [0mzip[0m[0;34m([0m[0mY_test[0m[0;34m,[0m [0mimage_name[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;32m/opt/caffe/python/caffe/classifier.pyc[0m in [0;36m__init__[0;34m(self, model_file, pretrained_file, image_dims, mean, input_scale, raw_scale, channel_swap)[0m
+[1;32m     24[0m                  [0mmean[0m[0;34m=[0m[0mNone[0m[0;34m,[0m [0minput_scale[0m[0;34m=[0m[0mNone[0m[0;34m,[0m [0mraw_scale[0m[0;34m=[0m[0mNone[0m[0;34m,[0m[0;34m[0m[0m
+[1;32m     25[0m                  channel_swap=None):
+[0;32m---> 26[0;31m         [0mcaffe[0m[0;34m.[0m[0mNet[0m[0;34m.[0m[0m__init__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mmodel_file[0m[0;34m,[0m [0mcaffe[0m[0;34m.[0m[0mTEST[0m[0;34m,[0m [0mweights[0m[0;34m=[0m[0mpretrained_file[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m     27[0m [0;34m[0m[0m
+[1;32m     28[0m         [0;31m# configure pre-processing[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mRuntimeError[0m: Could not open file ../../weights/china_lenet_dp234/china_lenet_dp234_value2_iter_15000.caffemodel

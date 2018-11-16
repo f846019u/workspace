@@ -1,0 +1,383 @@
+name: "China_LeNet_db234"
+layer {
+  name: "china"
+  type: "Data"
+  top: "data"
+  top: "label"
+  include {
+    phase: TRAIN
+  }
+  transform_param {
+    scale: 0.00390625
+  }
+  data_param {
+    source: "../DB/china_data_value0_train_lmdb"
+    batch_size: 64
+    backend: LMDB
+  }
+}
+layer {
+  name: "china"
+  type: "Data"
+  top: "data"
+  top: "label"
+  include {
+    phase: TEST
+  }
+  transform_param {
+    scale: 0.00390625
+  }
+  data_param {
+    source: "../DB/china_data_value0_test_lmdb"
+    batch_size: 100
+    backend: LMDB
+  }
+}
+layer {
+  name: "conv1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  convolution_param {
+    num_output: 32
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer{
+        name: "relu1"
+        type: "ReLU"
+        bottom: "conv1"
+        top: "conv1"
+}
+
+
+layer {
+      name: "conv2_dw"
+      type: "Convolution"
+      bottom: "conv1"
+      top: "conv2_dw"
+      param {
+            lr_mult: 1
+      }
+      param {
+            lr_mult: 2
+      }
+      convolution_param{
+        num_output: 32
+        kernel_size: 3
+        stride: 1
+	group: 32
+        weight_filler{
+                type: "xavier"
+        }
+        bias_filler{
+                type: "constant"
+        }
+      }
+}
+
+layer{
+        name: "relu2_dw"
+        type: "ReLU"
+        bottom: "conv2_dw"
+        top: "conv2_dw"
+}
+
+layer {
+      name: "conv2_pw"
+      type: "Convolution"
+      bottom: "conv2_dw"
+      top: "conv2_pw"
+      param {
+            lr_mult: 1
+      }
+      param {
+            lr_mult: 2
+      }
+      convolution_param{
+        num_output: 32
+        kernel_size: 1
+        stride: 1
+        weight_filler{
+                type: "xavier"
+        }
+        bias_filler{
+                type: "constant"
+        }
+      }
+}
+
+layer{
+        name: "relu2_pw"
+        type: "ReLU"
+        bottom: "conv2_pw"
+        top: "conv2_pw"
+}
+
+layer{
+        name: "batch_norm1"
+        type: "BatchNorm"
+        bottom: "conv2_pw"
+        top: "batch_norm1"
+}
+
+layer {
+  name: "pool1"
+  type: "Pooling"
+  bottom: "batch_norm1"
+  top: "pool1"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+
+
+layer {
+      name: "conv3_dw"
+      type: "Convolution"
+      bottom: "pool1"
+      top: "conv3_dw"
+      param {
+            lr_mult: 1
+      }
+      param {
+            lr_mult: 2
+      }
+      convolution_param{
+        num_output: 64
+        kernel_size: 3
+        stride: 1
+	group: 32
+        weight_filler{
+                type: "xavier"
+        }
+        bias_filler{
+                type: "constant"
+        }
+      }
+}
+
+layer{
+        name: "relu3_dw"
+        type: "ReLU"
+        bottom: "conv3_dw"
+        top: "conv3_dw"
+}
+
+layer {
+      name: "conv3_pw"
+      type: "Convolution"
+      bottom: "conv3_dw"
+      top: "conv3_pw"
+      param {
+            lr_mult: 1
+      }
+      param {
+            lr_mult: 2
+      }
+      convolution_param{
+        num_output: 64
+        kernel_size: 1
+        stride: 1
+        weight_filler{
+                type: "xavier"
+        }
+        bias_filler{
+                type: "constant"
+        }
+      }
+}
+
+layer{
+        name: "relu3_pw"
+        type: "ReLU"
+        bottom: "conv3_pw"
+        top: "conv3_pw"
+}
+
+
+layer {
+      name: "conv4_dw"
+      type: "Convolution"
+      bottom: "conv3_pw"
+      top: "conv4_dw"
+      param {
+            lr_mult: 1
+      }
+      param {
+            lr_mult: 2
+      }
+      convolution_param{
+        num_output: 64
+        kernel_size: 3
+        stride: 1
+	group: 64
+        weight_filler{
+                type: "xavier"
+        }
+        bias_filler{
+                type: "constant"
+        }
+      }
+}
+
+layer{
+        name: "relu4_dw"
+        type: "ReLU"
+        bottom: "conv4_dw"
+        top: "conv4_dw"
+}
+
+layer {
+      name: "conv4_pw"
+      type: "Convolution"
+      bottom: "conv4_dw"
+      top: "conv4_pw"
+      param {
+            lr_mult: 1
+      }
+      param {
+            lr_mult: 2
+      }
+      convolution_param{
+        num_output: 64
+        kernel_size: 1
+        stride: 1
+        weight_filler{
+                type: "xavier"
+        }
+        bias_filler{
+                type: "constant"
+        }
+      }
+}
+
+layer{
+        name: "relu4_pw"
+        type: "ReLU"
+        bottom: "conv4_pw"
+        top: "conv4_pw"
+}
+
+layer {
+      name: "batch_norm2"
+      type: "BatchNorm"
+      bottom: "conv4_pw"
+      top: "batch_norm2"
+}
+
+
+layer {
+  name: "pool2"
+  type: "Pooling"
+  bottom: "batch_norm2"
+  top: "pool2"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+
+layer {
+      name: "flatten"
+      type: "Flatten"
+      bottom: "pool2"
+      top: "flatten"
+}
+
+
+layer {
+  name: "ip1"
+  type: "InnerProduct"
+  bottom: "flatten"
+  top: "ip1"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 256
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "relu5"
+  type: "ReLU"
+  bottom: "ip1"
+  top: "ip1"
+}
+
+layer {
+      name: "dropout"
+      type: "Dropout"
+      bottom: "ip1"
+      top: "ip1"
+      dropout_param: {
+                     dropout_ratio: 0.5
+      }
+}
+
+layer {
+  name: "ip2"
+  type: "InnerProduct"
+  bottom: "ip1"
+  top: "ip2"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 36
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "accuracy"
+  type: "Accuracy"
+  bottom: "ip2"
+  bottom: "label"
+  top: "accuracy"
+  include {
+    phase: TEST
+  }
+}
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "ip2"
+  bottom: "label"
+  top: "loss"
+}
